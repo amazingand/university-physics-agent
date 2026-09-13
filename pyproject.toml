@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "university-physics-agent"
-version = "0.5.0"
+version = "0.6.0"
 description = "面向大学物理基础课的中文教学 Agent"
 readme = "README.md"
 license = "MIT"
@@ -21,6 +21,7 @@ dependencies = [
 
 [project.scripts]
 physics-agent = "physics_agent.cli:main"
+physics-agent-gui = "physics_agent.gui:main"
 
 [tool.setuptools]
 include-package-data = false

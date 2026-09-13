@@ -1,10 +1,22 @@
 # University Physics Agent
 
-面向大学物理学习的本地优先 CLI。0.5.0 是 GitHub **Pre-release（预览版）**，用于验证可审计知识检索、分层提示、受控完整解答和本地学习记录；它还不是完整课程平台。
+面向大学物理学习的本地优先工具。0.6.0 Windows v0 和 0.5.0 WSL/Linux 版均为 GitHub
+**Pre-release（预览版）**；它们用于先行试用可审计知识检索、分层提示、受控完整解答和本地学习记录，
+还不是完整课程平台。
+
+## Windows v0（优先试用）
+
+Windows 10/11 x64 学生可下载
+[`university-physics-agent-0.6.0-windows-x64-v0.zip`](https://github.com/amazingand/university-physics-agent/releases/tag/v0.6.0)，
+解压后双击 `windows\launch-physics-agent.cmd`。首次需要已安装的 Python 3.12 x64，并会在明确提示后
+联网安装本项目既有依赖；不需要 WSL 或 Codex。打开后先点“案例 A”或“案例 C”即可本地试用。
+脚本支持 `py -3.12`、PATH 中的 `python` 或 `PHYSICS_AGENT_PYTHON` 指定的解释器。
+
+完整步骤与限制见 [Windows v0 快速开始](docs/student/WINDOWS-V0.md)。
 
 ## 使用条件
 
-- 仅支持 Linux 与 WSL；Windows 用户请在 WSL 中使用，推荐 VS Code Remote WSL。
+- 0.6.0 Windows v0 面向 Windows 10/11 x64；0.5.0 继续支持 Linux/WSL。
 - 学生只需 Python/Conda 环境，不需要安装或使用 Codex。
 - 案例 A/C、知识检索、题目导入和学习记录可在本地运行；配置 DeepSeek 的案例 B、`chat` 或 `teach` 才会联网。
 - 下载预览资产请访问 [GitHub Releases](https://github.com/amazingand/university-physics-agent/releases)。
@@ -86,6 +98,7 @@ conda run -n physics-agent physics-agent question-import examples/questions/net-
 ## 文档
 
 - [快速开始](docs/student/QUICKSTART.md)
+- [Windows v0 快速开始](docs/student/WINDOWS-V0.md)
 - [隐私与限制](docs/student/PRIVACY-LIMITS.md)
 - [故障排查](docs/student/TROUBLESHOOTING.md)
 - [可复现重建](docs/student/REBUILD.md)

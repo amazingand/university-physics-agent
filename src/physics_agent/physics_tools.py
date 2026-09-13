@@ -225,14 +225,26 @@ def _worker_entry(
 
 
 def _apply_worker_limits(memory_limit_mb: int, timeout_seconds: float) -> None:
-    if not sys.platform.startswith("linux"):
-        raise _InputError("unsupported_platform", "内存硬限制当前只支持 WSL/Linux")
-    import resource
+    # Windows 没有 ``resource``，但仍由 spawn worker、父进程硬超时和完整输入
+    # 白名单提供隔离。其他 Unix 若缺少对应能力也安全降级为同一组边界。
+    if sys.platform == "win32":
+        return
+    try:
+        import resource
+    except ImportError:
+        return
+
+    if not hasattr(resource, "RLIMIT_AS") or not hasattr(resource, "RLIMIT_CPU"):
+        return
 
     memory_bytes = memory_limit_mb * 1024 * 1024
-    resource.setrlimit(resource.RLIMIT_AS, (memory_bytes, memory_bytes))
     cpu_seconds = max(1, math.ceil(timeout_seconds))
-    resource.setrlimit(resource.RLIMIT_CPU, (cpu_seconds, cpu_seconds + 1))
+    try:
+        resource.setrlimit(resource.RLIMIT_AS, (memory_bytes, memory_bytes))
+        resource.setrlimit(resource.RLIMIT_CPU, (cpu_seconds, cpu_seconds + 1))
+    except (OSError, ValueError):
+        # 某些 Unix/容器不允许收紧 rlimit；不能因此退回同进程执行。
+        return
 
 
 def _dispatch(arguments: dict[str, Any]) -> dict[str, object]:

@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "1f2f52f109d9b41dd7b04eaa062a2e7a90489fc7a4a2e524b5bb3be977bbc54a",
-      "size": 5217
+      "sha256": "93ac8801f703be5516832ca6c7eaba975a4ec516765d98443b5cf3a683fcfbb4",
+      "size": 5937
     },
     {
       "path": "THIRD_PARTY_NOTICES",
@@ -36,6 +36,11 @@
       "path": "config/local.example.toml",
       "sha256": "4f88adb5570e1c36f6a58f062e16beda547f233c5b910829ba21567da5f47d22",
       "size": 839
+    },
+    {
+      "path": "docs/course/COVERAGE.md",
+      "sha256": "deedf2786cb890cc217ec084c0572c842577119907d583e5cee173d47976a90c",
+      "size": 1525
     },
     {
       "path": "docs/student/PRIVACY-LIMITS.md",
@@ -56,6 +61,11 @@
       "path": "docs/student/TROUBLESHOOTING.md",
       "sha256": "dea170ea4f2b6a7dd9e80d1e7a761a15bd37026bdbecf6c3cb351b50c15053fb",
       "size": 3057
+    },
+    {
+      "path": "docs/student/WINDOWS-V0.md",
+      "sha256": "0ddac0f2928e3b479b5383a008be7c25cdd98c7c091d50c29afd5414ac096f7a",
+      "size": 2363
     },
     {
       "path": "environment.yml",
@@ -114,8 +124,8 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "fc2e575e09d88329bff6dada74f7cdf0f2d2c087590ac1b3a51d239b4d64cd2d",
-      "size": 712
+      "sha256": "623fb40a537717d9bd498786eaad27e87a546cb2596286145800064ba53a2af1",
+      "size": 757
     },
     {
       "path": "schemas/knowledge-package.schema.json",
@@ -139,7 +149,7 @@
     },
     {
       "path": "src/physics_agent/__init__.py",
-      "sha256": "a13d93b9185e815eb099e72f9b5bfb962f4c3ff9e47f930c8bf08c39f5d2b9df",
+      "sha256": "f0aea5fa99fcddd0dbcd4b2205be1c80b6aeb294783fe468addf198ecc96bae8",
       "size": 76
     },
     {
@@ -188,6 +198,11 @@
       "size": 3689
     },
     {
+      "path": "src/physics_agent/gui.py",
+      "sha256": "d8a7c16ab7ebebafdba62dada1b1279c514f93a8f864feb6293dd520fa755c1e",
+      "size": 23377
+    },
+    {
       "path": "src/physics_agent/knowledge.py",
       "sha256": "6e9095b37d7d1db07c57b02342eba344d36fe6835ca540889ccdde0f52c91357",
       "size": 30287
@@ -199,8 +214,8 @@
     },
     {
       "path": "src/physics_agent/physics_tools.py",
-      "sha256": "c15217af4165d2284117e9711acf10d9199c4139975c347bb6e663a2a7ac9fc0",
-      "size": 26089
+      "sha256": "e6380b96e26a75c664be8b26e9b276830dd46a26573ce45b89da25d82316428e",
+      "size": 26498
     },
     {
       "path": "src/physics_agent/provider_diagnostics.py",
@@ -271,8 +286,13 @@
       "path": "src/physics_agent/teaching.py",
       "sha256": "000171ee94dbfa02c58a466bfc0aa86f56496c22137f0e9da1e5091d9ac24aff",
       "size": 43559
+    },
+    {
+      "path": "windows/launch-physics-agent.cmd",
+      "sha256": "20a04c7dfc140212e32a68e4af223e82db025d62892191481c9f910905f9f194",
+      "size": 2123
     }
   ],
-  "project_version": "0.5.0",
-  "source_commit": "0c50f404c9e2e05271f6fc9413bb5d4f42685190"
+  "project_version": "0.6.0",
+  "source_commit": "4c22aa774a1eebd019ff9486efb533bb7058e4ed"
 }
