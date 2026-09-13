@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:university-physics-agent:schema:learning-package:1.1",
+  "title": "匿名结构化学习包 1.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "data_version",
+    "exported_at",
+    "learner_id",
+    "knowledge_package",
+    "records"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.1" },
+    "data_version": { "type": "string", "minLength": 1 },
+    "exported_at": { "type": "string", "format": "date-time" },
+    "learner_id": { "$ref": "#/$defs/anonymous_id" },
+    "knowledge_package": { "$ref": "#/$defs/knowledge_package_ref" },
+    "records": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": { "$ref": "#/$defs/learning_record" }
+    }
+  },
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,127}$"
+    },
+    "anonymous_id": {
+      "type": "string",
+      "pattern": "^anon_[A-Za-z0-9_-]{12,128}$"
+    },
+    "knowledge_package_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "version": { "type": "string", "minLength": 1 }
+      }
+    },
+    "question_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "revision"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "revision": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "error_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "count",
+        "correct_count",
+        "status",
+        "first_seen_at",
+        "last_seen_at"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "concept",
+            "model",
+            "force_omission",
+            "symbol",
+            "unit",
+            "algebra",
+            "order_of_magnitude",
+            "other"
+          ]
+        },
+        "count": { "type": "integer", "minimum": 1 },
+        "correct_count": { "type": "integer", "minimum": 0 },
+        "status": { "enum": ["pending_confirmation", "confirmed", "corrected"] },
+        "first_seen_at": { "type": "string", "format": "date-time" },
+        "last_seen_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["outcome"],
+      "properties": {
+        "outcome": { "enum": ["correct", "partial", "incorrect", "unattempted"] },
+        "score": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "learning_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "knowledge_point_id",
+        "question",
+        "hint_level",
+        "performance",
+        "weakness_confidence",
+        "updated_at"
+      ],
+      "properties": {
+        "knowledge_point_id": { "$ref": "#/$defs/stable_id" },
+        "question": { "$ref": "#/$defs/question_ref" },
+        "hint_level": { "type": "integer", "minimum": 0 },
+        "performance": { "$ref": "#/$defs/performance" },
+        "error": { "$ref": "#/$defs/error_summary" },
+        "weakness_confidence": { "type": "number", "minimum": 0, "maximum": 0.95 },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

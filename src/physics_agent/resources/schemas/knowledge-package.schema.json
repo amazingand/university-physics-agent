@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:university-physics-agent:schema:knowledge-package:1.0",
+  "title": "大学物理知识包清单",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "package_id",
+    "version",
+    "created_at",
+    "language",
+    "status",
+    "sources",
+    "items"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "package_id": { "$ref": "#/$defs/stable_id" },
+    "version": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "language": { "const": "zh-CN" },
+    "status": { "enum": ["draft", "published"] },
+    "sources": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/item" }
+    },
+    "indexes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/index" }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "published" } } },
+      "then": {
+        "properties": {
+          "sources": {
+            "items": {
+              "properties": {
+                "license": {
+                  "properties": {
+                    "allows_adaptation": { "const": true },
+                    "allows_redistribution": { "const": true }
+                  }
+                },
+                "verification": {
+                  "properties": { "status": { "const": "verified" } },
+                  "required": ["verified_at"]
+                }
+              }
+            }
+          },
+          "items": {
+            "items": {
+              "properties": {
+                "provenance": {
+                  "properties": { "human_reviewed": { "const": true } }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,127}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "relative_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "url", "attribution", "allows_adaptation", "allows_redistribution"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "attribution": { "type": "string", "minLength": 1 },
+        "allows_adaptation": { "type": "boolean" },
+        "allows_redistribution": { "type": "boolean" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "url", "version", "license", "locator_method", "verification"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "version": { "type": "string", "minLength": 1 },
+        "license": { "$ref": "#/$defs/license" },
+        "locator_method": { "type": "string", "minLength": 1 },
+        "verification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "evidence_ref"],
+          "properties": {
+            "status": { "enum": ["pending", "verified"] },
+            "evidence_ref": { "type": "string", "minLength": 1 },
+            "verified_at": { "type": "string", "format": "date-time" }
+          }
+        }
+      }
+    },
+    "course_alignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["book_title", "edition", "chapter", "verification_status"],
+      "properties": {
+        "book_title": { "type": "string", "minLength": 1 },
+        "edition": { "type": "string", "minLength": 1 },
+        "chapter": { "type": ["string", "null"] },
+        "verification_status": { "enum": ["pending", "verified"] }
+      }
+    },
+    "source_locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "section": { "type": "string", "minLength": 1 },
+        "paragraph": { "type": "string", "minLength": 1 },
+        "stable_entry_id": { "type": "string", "minLength": 1 },
+        "pdf_file_page": { "type": "integer", "minimum": 1 },
+        "printed_page": { "type": "string", "minLength": 1 }
+      },
+      "anyOf": [
+        { "required": ["section"] },
+        { "required": ["paragraph"] },
+        { "required": ["stable_entry_id"] },
+        { "required": ["pdf_file_page"] },
+        { "required": ["printed_page"] }
+      ]
+    },
+    "factual_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "locator", "source_version", "license_id"],
+      "properties": {
+        "source_id": { "$ref": "#/$defs/stable_id" },
+        "locator": { "$ref": "#/$defs/source_locator" },
+        "source_version": { "type": "string", "minLength": 1 },
+        "license_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "course_alignment", "factual_sources", "copied_text", "human_reviewed"],
+      "properties": {
+        "kind": { "enum": ["original", "open_source", "course_mapping"] },
+        "course_alignment": { "$ref": "#/$defs/course_alignment" },
+        "factual_sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/factual_source" }
+        },
+        "copied_text": { "type": "boolean" },
+        "human_reviewed": { "type": "boolean", "default": false },
+        "transformation": { "type": ["string", "null"] }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "kind": { "enum": ["original", "open_source"] } },
+            "required": ["kind"]
+          },
+          "then": {
+            "properties": { "factual_sources": { "minItems": 1 } }
+          }
+        }
+      ]
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "media_type", "sha256", "provenance"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "path": { "$ref": "#/$defs/relative_path" },
+        "media_type": { "enum": ["text/markdown", "application/json", "application/yaml"] },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "provenance": { "$ref": "#/$defs/provenance" }
+      }
+    },
+    "index": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "derived", "rebuild_command"],
+      "properties": {
+        "path": { "$ref": "#/$defs/relative_path" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "derived": { "const": true },
+        "rebuild_command": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

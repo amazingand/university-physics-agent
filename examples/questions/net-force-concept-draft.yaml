@@ -1,0 +1,46 @@
+schema_version: "1.0"
+id: mechanics.net-force.concept-001
+revision: 1
+language: zh-CN
+type: conceptual
+knowledge_points:
+  - mechanics.net-force
+difficulty: 2
+statement: 合外力为零是否一定意味着物体静止？请说明理由。
+answer:
+  kind: text
+  text: 不一定。合外力为零表示加速度为零，物体也可能保持非零的恒定速度做匀速直线运动。
+hints:
+  - level: 1
+    text: 先区分速度和加速度。
+  - level: 2
+    text: 用牛顿第二定律判断合外力为零时的加速度。
+  - level: 3
+    text: 加速度为零意味着速度不随时间改变，不等于速度数值必须为零。
+explanation: 牛顿第二定律给出合外力为零时加速度为零；初速度可以为零，也可以不为零。
+rubric:
+  - criterion: 指出加速度为零
+    points: 1
+    required: true
+  - criterion: 指出可以保持非零恒定速度
+    points: 1
+    required: true
+provenance:
+  kind: open_source
+  course_alignment:
+    book_title: 程守洙、江之永《普通物理学》
+    edition: 第八版（待核实）
+    chapter: null
+    verification_status: pending
+  factual_sources:
+    - source_id: ostp-physics-art-of-modelling
+      locator:
+        section: "tex/NewtonsLaws.tex :: Newton's Second Law"
+      source_version: dc3ef263f5e00aea467447e08a94f23f573dae31
+      license_id: CC-BY-SA-4.0
+  copied_text: false
+  human_reviewed: false
+  creation_method: agent
+  transformation: 依据固定开放来源的物理事实新编中文概念题；未复制原题或答案。
+review:
+  status: draft

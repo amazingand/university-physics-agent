@@ -1,0 +1,278 @@
+{
+  "format": "university-physics-agent-public-source",
+  "format_version": 1,
+  "payload": [
+    {
+      "path": ".gitignore",
+      "sha256": "d5b27cb978b9ee4c56f4162905f6f23c844f8201c9818570063cc841aa0f3ddf",
+      "size": 374
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "5cde4913999c24d8378dcae777876d03a50ec13c807cc93e623c1081dd49c4e0",
+      "size": 1063
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "3472b52537bd2cf0dd190084221119ed8037de6765717b6fc33d93c5174fe1b8",
+      "size": 1585
+    },
+    {
+      "path": "README.md",
+      "sha256": "1f2f52f109d9b41dd7b04eaa062a2e7a90489fc7a4a2e524b5bb3be977bbc54a",
+      "size": 5217
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES",
+      "sha256": "921b5be5394d358bc946f55173a568243e7d4e7f4be7c1e376d524d7734aa959",
+      "size": 324378
+    },
+    {
+      "path": "config/default.toml",
+      "sha256": "0765cf54a9bf546095e7ce4a04da633c5c94b7caf26a9bd9fd16b71677b2e7d0",
+      "size": 646
+    },
+    {
+      "path": "config/local.example.toml",
+      "sha256": "4f88adb5570e1c36f6a58f062e16beda547f233c5b910829ba21567da5f47d22",
+      "size": 839
+    },
+    {
+      "path": "docs/student/PRIVACY-LIMITS.md",
+      "sha256": "c969e240dc0fd546d8d7361c1c1beb55827fc441770027ada841638cfbd9b112",
+      "size": 2531
+    },
+    {
+      "path": "docs/student/QUICKSTART.md",
+      "sha256": "8c71de2b0c1a55b3a761ce0b1a8e1063328ec5a16212d93b45f2cfa6b147377a",
+      "size": 3716
+    },
+    {
+      "path": "docs/student/REBUILD.md",
+      "sha256": "d9050bf9c8261721cb23e4186875b97f0fddff541635f7f68c6ea6209ffad591",
+      "size": 2684
+    },
+    {
+      "path": "docs/student/TROUBLESHOOTING.md",
+      "sha256": "dea170ea4f2b6a7dd9e80d1e7a761a15bd37026bdbecf6c3cb351b50c15053fb",
+      "size": 3057
+    },
+    {
+      "path": "environment.yml",
+      "sha256": "f15af7863540f41832737268166add395064b30bcc7ef43ad5861594ef934047",
+      "size": 661
+    },
+    {
+      "path": "examples/questions/net-force-concept-draft.yaml",
+      "sha256": "ee347ce33aabc33f47e73261f67bba287710cd8dcf1b3ca6101b5eb3ac51622b",
+      "size": 1565
+    },
+    {
+      "path": "knowledge/mechanics-zh-reviewed-0.2.0/items/applied-force.md",
+      "sha256": "97d4cf0283e5bc9cdc3d1a792073bf499ee3514389cc7f5f4cdf3f4ac7afb5c4",
+      "size": 328
+    },
+    {
+      "path": "knowledge/mechanics-zh-reviewed-0.2.0/items/inertial-frame.md",
+      "sha256": "2dcd5ec8220db5ac91dbba6758b45036d4287565264abb5d126794676d2c15a1",
+      "size": 415
+    },
+    {
+      "path": "knowledge/mechanics-zh-reviewed-0.2.0/items/kinetic-friction.md",
+      "sha256": "ad6e24cfd250b0de4cf72e15681e1dcc67a587d3b371d3bdfbcd29ff6cc540d0",
+      "size": 352
+    },
+    {
+      "path": "knowledge/mechanics-zh-reviewed-0.2.0/items/net-force.md",
+      "sha256": "5ac6095d3b38af6a264e47001c52e27cf345c651d704e114b90a735c1f02e9d0",
+      "size": 386
+    },
+    {
+      "path": "knowledge/mechanics-zh-reviewed-0.2.0/items/newton-laws.md",
+      "sha256": "8922bd6d468eff6240313cdd83af3df3aabcda89f3b703d40305673b44f78cbd",
+      "size": 447
+    },
+    {
+      "path": "knowledge/mechanics-zh-reviewed-0.2.0/items/normal-force.md",
+      "sha256": "7683c1bbd46a5fe50531834e30b852eb3db431e623830d5d49e415f18c425c76",
+      "size": 379
+    },
+    {
+      "path": "knowledge/mechanics-zh-reviewed-0.2.0/items/static-friction.md",
+      "sha256": "ec0cd6015189e1d8d36de109bcc1f21f499d3544bab72c5c72696da4c19cd547",
+      "size": 396
+    },
+    {
+      "path": "knowledge/mechanics-zh-reviewed-0.2.0/items/weight.md",
+      "sha256": "5a1e772218881b230543071c1a4abfbcff0f875cf08c975d8cc9ae30651e6973",
+      "size": 342
+    },
+    {
+      "path": "knowledge/mechanics-zh-reviewed-0.2.0/manifest.json",
+      "sha256": "704a520ce35d859fe4b0a5305d6c4484b7c5a0a10872e32b411cb05a3c986a1b",
+      "size": 9338
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "fc2e575e09d88329bff6dada74f7cdf0f2d2c087590ac1b3a51d239b4d64cd2d",
+      "size": 712
+    },
+    {
+      "path": "schemas/knowledge-package.schema.json",
+      "sha256": "38b44339411f374d6fabecd01e92bfaf0526950411ab649961fc929d675e63c3",
+      "size": 6974
+    },
+    {
+      "path": "schemas/learning-package-1.1.schema.json",
+      "sha256": "5f136ebfe8a060ba5ac31ed5175290386255e343a149ae79bcd5817cdd508f41",
+      "size": 3451
+    },
+    {
+      "path": "schemas/learning-package.schema.json",
+      "sha256": "4594fa8dd7bec2efd841270f00a06a60b92d6afc05e812329b34f4d659f17202",
+      "size": 3284
+    },
+    {
+      "path": "schemas/question.schema.json",
+      "sha256": "f20fe5dce92db058b43979db4ef0af1209cd6ef3b4a26684ce74904427d888df",
+      "size": 9206
+    },
+    {
+      "path": "src/physics_agent/__init__.py",
+      "sha256": "a13d93b9185e815eb099e72f9b5bfb962f4c3ff9e47f930c8bf08c39f5d2b9df",
+      "size": 76
+    },
+    {
+      "path": "src/physics_agent/__main__.py",
+      "sha256": "bf8b830e768f62ec2f04c411ddaead4e0450fe4ac8eb83923f4a5c5e6ac3292c",
+      "size": 114
+    },
+    {
+      "path": "src/physics_agent/api_budget.py",
+      "sha256": "1e4bbcc4f819a35306065d1f1e82f92355662c189d76a5ab0c48f70594fdfc2b",
+      "size": 16537
+    },
+    {
+      "path": "src/physics_agent/api_completion.py",
+      "sha256": "1284305c44093df49652eae09da84825794580ca1e08ebf49af39eb1f423c804",
+      "size": 19038
+    },
+    {
+      "path": "src/physics_agent/api_final.py",
+      "sha256": "0b981e314b3e8418190e267454d3fd79c1b42b1bc45d00dcecbbcbe7b2da0543",
+      "size": 18817
+    },
+    {
+      "path": "src/physics_agent/api_finalize.py",
+      "sha256": "f13e21a846056390ed156d744cd2a8681e25dbd98113879db39b99eb99afc31b",
+      "size": 29997
+    },
+    {
+      "path": "src/physics_agent/api_resume.py",
+      "sha256": "7bfd2333a5fe2e1a83550c92c360d3e1ea5e61ccbb0c3ed07a59971050c4b324",
+      "size": 27933
+    },
+    {
+      "path": "src/physics_agent/cli.py",
+      "sha256": "75f0933a5e20db6e5083f10a6d6b91e555b2b31d7ad829604766202eababd276",
+      "size": 51353
+    },
+    {
+      "path": "src/physics_agent/config.py",
+      "sha256": "9a431eff48bb1fd3393e2fd1d523810808a761fa2d1241bb57d5851336213a63",
+      "size": 8278
+    },
+    {
+      "path": "src/physics_agent/core.py",
+      "sha256": "4c5e8a0163192d4b4207623d552f53b7aab99f1226ab2a795e5facde96d49f3e",
+      "size": 3689
+    },
+    {
+      "path": "src/physics_agent/knowledge.py",
+      "sha256": "6e9095b37d7d1db07c57b02342eba344d36fe6835ca540889ccdde0f52c91357",
+      "size": 30287
+    },
+    {
+      "path": "src/physics_agent/learning.py",
+      "sha256": "712de817a0bbcb3d1b355dc64f00682ea623ca893162598682c377664cf29815",
+      "size": 29963
+    },
+    {
+      "path": "src/physics_agent/physics_tools.py",
+      "sha256": "c15217af4165d2284117e9711acf10d9199c4139975c347bb6e663a2a7ac9fc0",
+      "size": 26089
+    },
+    {
+      "path": "src/physics_agent/provider_diagnostics.py",
+      "sha256": "2a6ba8ac82675d0b8372f4054cd04c0cc5d4ed537fc78e2add4542b9f744a3e2",
+      "size": 3171
+    },
+    {
+      "path": "src/physics_agent/providers/__init__.py",
+      "sha256": "dc05b932f69d378e414e5e5faf9f20b5089ddd8ae15aae64220c370a60062407",
+      "size": 129
+    },
+    {
+      "path": "src/physics_agent/providers/deepseek.py",
+      "sha256": "1b99ef64668156bf2b022fe262eed256102137ec86c44ab788b0c837b76d3d81",
+      "size": 17864
+    },
+    {
+      "path": "src/physics_agent/publication.py",
+      "sha256": "2f8719c45bfffec186b081d7e40ae650627f8292b9d1a1ebd0e945259b3c0ca1",
+      "size": 13981
+    },
+    {
+      "path": "src/physics_agent/questions.py",
+      "sha256": "21de0542ceba6e87063e23e5e26b2249a825f5b015e64e8200a30ef8e2f0f5e9",
+      "size": 22463
+    },
+    {
+      "path": "src/physics_agent/release.py",
+      "sha256": "d15c716215e7a59d1549685e1d3eff833a85dcf2caba0821aba9f5e4df13e363",
+      "size": 67275
+    },
+    {
+      "path": "src/physics_agent/release_workflow.py",
+      "sha256": "396169441667a140c95dac19e57d440bf439ad82e1bf717487cc676c0a09a61a",
+      "size": 21701
+    },
+    {
+      "path": "src/physics_agent/resources/__init__.py",
+      "sha256": "265a99528a6745a615895086ceda19226adde34dcac122a92cef5486b66c58b5",
+      "size": 793
+    },
+    {
+      "path": "src/physics_agent/resources/config/default.toml",
+      "sha256": "0765cf54a9bf546095e7ce4a04da633c5c94b7caf26a9bd9fd16b71677b2e7d0",
+      "size": 646
+    },
+    {
+      "path": "src/physics_agent/resources/schemas/knowledge-package.schema.json",
+      "sha256": "38b44339411f374d6fabecd01e92bfaf0526950411ab649961fc929d675e63c3",
+      "size": 6974
+    },
+    {
+      "path": "src/physics_agent/resources/schemas/learning-package-1.1.schema.json",
+      "sha256": "5f136ebfe8a060ba5ac31ed5175290386255e343a149ae79bcd5817cdd508f41",
+      "size": 3451
+    },
+    {
+      "path": "src/physics_agent/resources/schemas/learning-package.schema.json",
+      "sha256": "4594fa8dd7bec2efd841270f00a06a60b92d6afc05e812329b34f4d659f17202",
+      "size": 3284
+    },
+    {
+      "path": "src/physics_agent/resources/schemas/question.schema.json",
+      "sha256": "f20fe5dce92db058b43979db4ef0af1209cd6ef3b4a26684ce74904427d888df",
+      "size": 9206
+    },
+    {
+      "path": "src/physics_agent/teaching.py",
+      "sha256": "000171ee94dbfa02c58a466bfc0aa86f56496c22137f0e9da1e5091d9ac24aff",
+      "size": 43559
+    }
+  ],
+  "project_version": "0.5.0",
+  "source_commit": "0c50f404c9e2e05271f6fc9413bb5d4f42685190"
+}

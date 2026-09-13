@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "university-physics-agent"
+version = "0.5.0"
+description = "面向大学物理基础课的中文教学 Agent"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = [
+    "httpx==0.28.1",
+    "jsonschema==4.26.0",
+    "numpy==2.4.6",
+    "pint==0.25.3",
+    "PyYAML==6.0.3",
+    "sympy==1.14.0",
+]
+
+[project.scripts]
+physics-agent = "physics_agent.cli:main"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"physics_agent.resources" = ["config/default.toml", "schemas/*.json"]

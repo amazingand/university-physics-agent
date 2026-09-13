@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+.venv/
+.env
+.env.*
+!.env.example
+
+# 本地凭据、配置覆盖与学习数据不得入库。
+config/local.toml
+config/*.secret.toml
+exports/
+cache/
+work/
+private/
+student-data/
+*.pptx
+*.ppt
+*.pdf
+*.key
+auth.json
+
+# 编辑器与系统临时文件。
+.vscode/
+.idea/
+*.swp
+*~

@@ -1,0 +1,40 @@
+# 复制为 config/local.toml 后按本机环境修改。local.toml 已被 Git 忽略。
+# 此文件只保存环境变量名称，不保存任何密钥值。
+schema_version = "1.1"
+
+[app]
+language = "zh-CN"
+
+[chat]
+provider = "deepseek"
+base_url = "https://api.deepseek.com"
+model = "deepseek-v4-pro"
+api_key_env = "PHYSICS_AGENT_CHAT_API_KEY"
+timeout_seconds = 30
+
+[chat.retry]
+max_attempts = 3
+base_delay_seconds = 0.5
+max_delay_seconds = 4.0
+max_total_delay_seconds = 8.0
+jitter_ratio = 0.2
+
+[embedding]
+provider = "unconfigured"
+base_url = ""
+model = ""
+api_key_env = "PHYSICS_AGENT_EMBEDDING_API_KEY"
+timeout_seconds = 30
+
+[embedding.retry]
+max_attempts = 3
+base_delay_seconds = 0.5
+max_delay_seconds = 4.0
+max_total_delay_seconds = 8.0
+jitter_ratio = 0.2
+
+[knowledge]
+cache_dir = "cache/knowledge"
+
+[learning]
+persistence = "memory"

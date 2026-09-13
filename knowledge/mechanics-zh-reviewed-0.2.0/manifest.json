@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0",
+  "package_id": "mechanics.zh.reviewed",
+  "version": "0.2.0",
+  "created_at": "2026-09-10T02:49:50+08:00",
+  "language": "zh-CN",
+  "status": "published",
+  "sources": [
+    {
+      "id": "ostp-physics-art-of-modelling",
+      "title": "Introductory Physics: Building Models to Describe Our World",
+      "url": "https://github.com/OSTP/PhysicsArtofModelling/blob/dc3ef263f5e00aea467447e08a94f23f573dae31/tex/NewtonsLaws.tex",
+      "version": "dc3ef263f5e00aea467447e08a94f23f573dae31",
+      "license": {
+        "id": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attribution": "Introductory Physics: Building Models to Describe Our World, Ryan D. Martin, Emma Neary, Joshua Rinaldo, Olivia Woodman; Chinese adaptation reviewed by the user for M4 packet 1.0.",
+        "allows_adaptation": true,
+        "allows_redistribution": true
+      },
+      "locator_method": "固定 Git 提交、tex/NewtonsLaws.tex 路径和 LaTeX 章节标题",
+      "verification": {
+        "status": "verified",
+        "evidence_ref": "docs/verification/OSTP-M3-LICENSE-AUDIT.md; docs/review/M4-HUMAN-REVIEW-PACKET.md",
+        "verified_at": "2026-09-10T02:49:50+08:00"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "mechanics.newton-laws",
+      "path": "items/newton-laws.md",
+      "media_type": "text/markdown",
+      "sha256": "8922bd6d468eff6240313cdd83af3df3aabcda89f3b703d40305673b44f78cbd",
+      "provenance": {
+        "kind": "open_source",
+        "course_alignment": {
+          "book_title": "程守洙、江之永《普通物理学》",
+          "edition": "第八版（待核实）",
+          "chapter": null,
+          "verification_status": "pending"
+        },
+        "factual_sources": [{
+          "source_id": "ostp-physics-art-of-modelling",
+          "locator": {"section": "tex/NewtonsLaws.tex :: Newton's Three Laws"},
+          "source_version": "dc3ef263f5e00aea467447e08a94f23f573dae31",
+          "license_id": "CC-BY-SA-4.0"
+        }],
+        "copied_text": false,
+        "human_reviewed": true,
+        "transformation": "依据固定英文源章节重新组织并用中文简要重述；未复制图片、例题或答案；用户已审核 M4 包 1.0。"
+      }
+    },
+    {
+      "id": "mechanics.net-force",
+      "path": "items/net-force.md",
+      "media_type": "text/markdown",
+      "sha256": "5ac6095d3b38af6a264e47001c52e27cf345c651d704e114b90a735c1f02e9d0",
+      "provenance": {
+        "kind": "open_source",
+        "course_alignment": {
+          "book_title": "程守洙、江之永《普通物理学》",
+          "edition": "第八版（待核实）",
+          "chapter": null,
+          "verification_status": "pending"
+        },
+        "factual_sources": [{
+          "source_id": "ostp-physics-art-of-modelling",
+          "locator": {"section": "tex/NewtonsLaws.tex :: Newton's Second Law"},
+          "source_version": "dc3ef263f5e00aea467447e08a94f23f573dae31",
+          "license_id": "CC-BY-SA-4.0"
+        }],
+        "copied_text": false,
+        "human_reviewed": true,
+        "transformation": "依据固定英文源章节重新组织并用中文简要重述；补充坐标分量建模提示；用户已审核 M4 包 1.0。"
+      }
+    },
+    {
+      "id": "mechanics.weight",
+      "path": "items/weight.md",
+      "media_type": "text/markdown",
+      "sha256": "5a1e772218881b230543071c1a4abfbcff0f875cf08c975d8cc9ae30651e6973",
+      "provenance": {
+        "kind": "open_source",
+        "course_alignment": {
+          "book_title": "程守洙、江之永《普通物理学》",
+          "edition": "第八版（待核实）",
+          "chapter": null,
+          "verification_status": "pending"
+        },
+        "factual_sources": [{
+          "source_id": "ostp-physics-art-of-modelling",
+          "locator": {"section": "tex/NewtonsLaws.tex :: Weight"},
+          "source_version": "dc3ef263f5e00aea467447e08a94f23f573dae31",
+          "license_id": "CC-BY-SA-4.0"
+        }],
+        "copied_text": false,
+        "human_reviewed": true,
+        "transformation": "依据固定英文源章节重新组织并用中文简要重述；删除原图与检查题；用户已审核 M4 包 1.0。"
+      }
+    },
+    {
+      "id": "mechanics.normal-force",
+      "path": "items/normal-force.md",
+      "media_type": "text/markdown",
+      "sha256": "7683c1bbd46a5fe50531834e30b852eb3db431e623830d5d49e415f18c425c76",
+      "provenance": {
+        "kind": "open_source",
+        "course_alignment": {
+          "book_title": "程守洙、江之永《普通物理学》",
+          "edition": "第八版（待核实）",
+          "chapter": null,
+          "verification_status": "pending"
+        },
+        "factual_sources": [{
+          "source_id": "ostp-physics-art-of-modelling",
+          "locator": {"section": "tex/NewtonsLaws.tex :: Normal forces"},
+          "source_version": "dc3ef263f5e00aea467447e08a94f23f573dae31",
+          "license_id": "CC-BY-SA-4.0"
+        }],
+        "copied_text": false,
+        "human_reviewed": true,
+        "transformation": "依据固定英文源章节重新组织并用中文简要重述；删除原图与例子复刻；用户已审核 M4 包 1.0。"
+      }
+    },
+    {
+      "id": "mechanics.applied-force",
+      "path": "items/applied-force.md",
+      "media_type": "text/markdown",
+      "sha256": "97d4cf0283e5bc9cdc3d1a792073bf499ee3514389cc7f5f4cdf3f4ac7afb5c4",
+      "provenance": {
+        "kind": "open_source",
+        "course_alignment": {
+          "book_title": "程守洙、江之永《普通物理学》",
+          "edition": "第八版（待核实）",
+          "chapter": null,
+          "verification_status": "pending"
+        },
+        "factual_sources": [{
+          "source_id": "ostp-physics-art-of-modelling",
+          "locator": {"section": "tex/NewtonsLaws.tex :: Applied forces"},
+          "source_version": "dc3ef263f5e00aea467447e08a94f23f573dae31",
+          "license_id": "CC-BY-SA-4.0"
+        }],
+        "copied_text": false,
+        "human_reviewed": true,
+        "transformation": "依据固定英文源小节重新组织并用中文简要重述；增加受力对象记录要求；用户已审核 M4 包 1.0。"
+      }
+    },
+    {
+      "id": "mechanics.static-friction",
+      "path": "items/static-friction.md",
+      "media_type": "text/markdown",
+      "sha256": "ec0cd6015189e1d8d36de109bcc1f21f499d3544bab72c5c72696da4c19cd547",
+      "provenance": {
+        "kind": "open_source",
+        "course_alignment": {
+          "book_title": "程守洙、江之永《普通物理学》",
+          "edition": "第八版（待核实）",
+          "chapter": null,
+          "verification_status": "pending"
+        },
+        "factual_sources": [{
+          "source_id": "ostp-physics-art-of-modelling",
+          "locator": {"section": "tex/NewtonsLaws.tex :: Frictional forces (static)"},
+          "source_version": "dc3ef263f5e00aea467447e08a94f23f573dae31",
+          "license_id": "CC-BY-SA-4.0"
+        }],
+        "copied_text": false,
+        "human_reviewed": true,
+        "transformation": "依据固定英文源章节重新组织并用中文简要重述；突出条件不足时的分情况要求；用户已审核 M4 包 1.0。"
+      }
+    },
+    {
+      "id": "mechanics.kinetic-friction",
+      "path": "items/kinetic-friction.md",
+      "media_type": "text/markdown",
+      "sha256": "ad6e24cfd250b0de4cf72e15681e1dcc67a587d3b371d3bdfbcd29ff6cc540d0",
+      "provenance": {
+        "kind": "open_source",
+        "course_alignment": {
+          "book_title": "程守洙、江之永《普通物理学》",
+          "edition": "第八版（待核实）",
+          "chapter": null,
+          "verification_status": "pending"
+        },
+        "factual_sources": [{
+          "source_id": "ostp-physics-art-of-modelling",
+          "locator": {"section": "tex/NewtonsLaws.tex :: Frictional forces (kinetic)"},
+          "source_version": "dc3ef263f5e00aea467447e08a94f23f573dae31",
+          "license_id": "CC-BY-SA-4.0"
+        }],
+        "copied_text": false,
+        "human_reviewed": true,
+        "transformation": "依据固定英文源章节重新组织并用中文简要重述；突出滑动状态前提；用户已审核 M4 包 1.0。"
+      }
+    },
+    {
+      "id": "mechanics.inertial-frame",
+      "path": "items/inertial-frame.md",
+      "media_type": "text/markdown",
+      "sha256": "2dcd5ec8220db5ac91dbba6758b45036d4287565264abb5d126794676d2c15a1",
+      "provenance": {
+        "kind": "open_source",
+        "course_alignment": {
+          "book_title": "程守洙、江之永《普通物理学》",
+          "edition": "第八版（待核实）",
+          "chapter": null,
+          "verification_status": "pending"
+        },
+        "factual_sources": [{
+          "source_id": "ostp-physics-art-of-modelling",
+          "locator": {"section": "tex/NewtonsLaws.tex :: Newton's First Law"},
+          "source_version": "dc3ef263f5e00aea467447e08a94f23f573dae31",
+          "license_id": "CC-BY-SA-4.0"
+        }],
+        "copied_text": false,
+        "human_reviewed": true,
+        "transformation": "依据固定英文源章节重新组织并用中文简要重述；不复刻原列车或汽车例子；用户已审核 M4 包 1.0。"
+      }
+    }
+  ]
+}

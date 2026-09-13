@@ -1,0 +1,25 @@
+University Physics Agent NOTICE
+
+Original program code
+Copyright (c) 2026 余杰
+Source repository scope: src/physics_agent/**/*.py, src/physics_agent/resources/**, .gitignore, README.md, pyproject.toml, environment.yml, config/**, schemas/**, and docs/student/**.
+Student bundle scope: the corresponding source/**, config/**, schemas/**, and docs/** paths, plus the project-authored program/resource portion of artifacts/*.whl.
+License: MIT; see LICENSE.
+
+Reviewed knowledge package and derived student example
+Scope: knowledge/mechanics-zh-reviewed-0.2.0/** and examples/questions/net-force-concept-draft.yaml
+License: CC BY-SA 4.0
+Work: Introductory Physics: Building Models to Describe Our World
+Authors: Ryan D. Martin, Emma Neary, Joshua Rinaldo, Olivia Woodman
+Source commit: dc3ef263f5e00aea467447e08a94f23f573dae31
+Source: https://github.com/OSTP/PhysicsArtofModelling/blob/dc3ef263f5e00aea467447e08a94f23f573dae31/tex/NewtonsLaws.tex
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+Change note: 中文重新组织与改编；未复制图片、原例题或答案；M4 固定审核包已经用户人工审核。
+
+Third-party software
+Scope: environment.yml 中的运行依赖及 Python、pip、setuptools、wheel、packaging 构建工具。
+These components retain their own licenses; see THIRD_PARTY_NOTICES.
+
+Generated integrity metadata
+Scope: PUBLIC-SOURCE.json, release-manifest.json, SHA256SUMS, the external archive sidecar, and archive container metadata.
+These factual names, sizes, modes, and cryptographic digests do not extend any license scope above.
